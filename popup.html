@@ -1,0 +1,54 @@
+<button id="btn">Click me</button>
+<div class="popup hidden">
+
+<p style="text-align: right; cursor: pointer;" id="close">X</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur magnam obcaecati ipsam excepturi iusto! Reprehenderit placeat nesciunt esse perspiciatis, sapiente quam voluptatibus eligendi omnis ab? Iure fuga illo eum!</p>
+</div>
+<div class="overlay hidden"></div>
+
+<style>
+    .popup{
+        background-color: black;
+        color: white;
+        padding: 2rem;
+        width: 200px;
+        z-index: 2;
+        position: relative;
+        top: 30%;
+        left: 40%;
+        
+    }
+    .hidden{
+        display: none;
+    }
+    .overlay{
+        background-color: black;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0%;
+        left: 0%;
+       
+    }
+</style>
+
+<script>
+    var popup = document.querySelector(".popup")
+    var btn = document.getElementById("btn")
+    var close = document.getElementById("close")
+    var overlay = document.querySelector(".overlay")
+
+    btn.addEventListener("click", function(){
+        popup.classList.remove("hidden")
+        overlay.classList.remove("hidden")
+    })
+    close.addEventListener("click", function(){
+        popup.classList.add ("hidden")
+        overlay.classList.add("hidden")
+    })
+    
+
+
+</script>
