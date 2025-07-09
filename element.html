@@ -1,0 +1,38 @@
+<!--APPEND, PREPEND and CREATE ELEMENT-->
+
+<!-- <button id="btn">Add</button>
+<div id="container">
+</div>
+
+
+<script>
+    var btn = document.getElementById("btn")
+    var container = document.getElementById("container")
+    btn.addEventListener("click", function () {
+        var heading = document.createElement("h1")
+        heading.textContent = "Hello"
+        console.log(heading)
+        container.append(heading)
+
+    })
+
+</script> -->
+
+<button id="btn">Add</button>
+<div id="container">
+    Bye
+</div>
+
+
+<script>
+    var btn = document.getElementById("btn")
+    var container = document.getElementById("container")
+    btn.addEventListener("click", function () {
+        var heading = document.createElement("h1")
+        heading.textContent = "Hello"
+        console.log(heading)
+        container.prepend(heading)
+
+    })
+
+</script>

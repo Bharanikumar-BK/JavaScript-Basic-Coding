@@ -1,54 +1,54 @@
-<button id="btn">Click me</button>
-<div class="popup hidden">
+<button id="btn">Click Me</button>
 
-<p style="text-align: right; cursor: pointer;" id="close">X</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur magnam obcaecati ipsam excepturi iusto! Reprehenderit placeat nesciunt esse perspiciatis, sapiente quam voluptatibus eligendi omnis ab? Iure fuga illo eum!</p>
+<div class="popup hidden">
+    <p style="text-align: right; cursor: pointer;" id="close">X</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sapiente ex deserunt! Eaque tempora facere excepturi quas aliquam unde reprehenderit, reiciendis nam maiores, deserunt sequi iure necessitatibus cum, temporibus illo.</p>
 </div>
 <div class="overlay hidden"></div>
 
 <style>
+    .overlay{
+         background-color: black;
+         opacity: 0.5;
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0%;
+         left: 0%;
+         z-index: 1;
+         
+    }
     .popup{
         background-color: black;
         color: white;
-        padding: 2rem;
+        padding: 1rem;
+        border-radius: 5px;
         width: 200px;
-        z-index: 2;
         position: relative;
-        top: 30%;
+        top: 25%;
         left: 40%;
-        
+        z-index: 2;
     }
     .hidden{
         display: none;
     }
-    .overlay{
-        background-color: black;
-        opacity: 0.5;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
-        top: 0%;
-        left: 0%;
-       
-    }
 </style>
 
 <script>
-    var popup = document.querySelector(".popup")
-    var btn = document.getElementById("btn")
-    var close = document.getElementById("close")
-    var overlay = document.querySelector(".overlay")
+      var popup = document.querySelector(".popup")
+      var close = document.getElementById("close")
+      var btn = document.getElementById("btn")
+      var overlay = document.querySelector(".overlay")
 
-    btn.addEventListener("click", function(){
-        popup.classList.remove("hidden")
-        overlay.classList.remove("hidden")
-    })
-    close.addEventListener("click", function(){
-        popup.classList.add ("hidden")
+      btn.addEventListener("click",function(){
+         popup.classList.remove("hidden")
+         overlay.classList.remove("hidden")
+      })
+
+      close.addEventListener("click", function(){
+        popup.classList.add("hidden")
         overlay.classList.add("hidden")
-    })
-    
-
-
+        
+      })
 </script>
+
