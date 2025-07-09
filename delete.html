@@ -1,0 +1,47 @@
+<!-- <h1 id="one">One</h1><button id="btn">Delete</button>
+
+<script>
+    var heading = document.getElementById("one")
+    var button = document.getElementById("btn")
+
+   button.addEventListener("click",function(){
+    heading.remove()
+   })
+</script>
+
+<h1 onclick="deleteElement(event)" style="cursor: pointer;">One</h1>
+<h1 onclick="deleteElement(event)" style="cursor: pointer;">Two</h1>
+<h1 onclick="deleteElement(event)" style="cursor: pointer;">Three</h1>
+<h1 onclick="deleteElement(event)" style="cursor: pointer;">Four</h1>
+<h1 onclick="deleteElement(event)" style="cursor: pointer;">Five</h1>
+<h1 onclick="deleteElement(event)" style="cursor: pointer;">Six </h1>
+
+<script>
+   
+     function deleteElement(event){
+        
+        event.target.remove()
+     }
+</script> -->
+
+
+<!--To Remove parent element-->
+
+<div class="container">
+    <h1 id="head">Hi</h1>
+</div>
+
+<script>
+    var head = document.getElementById("head")
+    head.parentElement.remove()
+</script>
+
+<!--To remove closest element-->
+<div class="container">
+    <h1 id="head">Hi</h1>
+</div>
+
+<script>
+    var head = document.getElementById("head")
+    head.closest(".container").remove()
+

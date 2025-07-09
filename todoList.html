@@ -1,0 +1,25 @@
+<input id="inputBox" type="text">
+<button id = "btn">Add</button>
+
+<ul id="container">
+    <li>
+        Hello
+        <button onclick="deleteFunction(event)">Delete</button>
+    </li>
+</ul>
+
+<script>
+    var inputBox = document.getElementById("inputBox")
+    var button = document.getElementById("btn")
+    var container = document.getElementById("container")
+
+    button.addEventListener("click",function(){
+        var li = document.createElement("li")
+        li.innerHTML = inputBox.value + '<button onclick="deleteFunction(event)">Delete</button>'
+        container.append(li)
+    })
+
+    function deleteFunction(event){
+        event.target.parentElement.remove()
+    }
+</script>
